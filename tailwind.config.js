@@ -2,7 +2,16 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    // what inside extend will extend default tailwind config
+    // what outside extend will override default tailwind config completely
+    extend: {
+      colors: {
+        "brand-blue": "#1992d4",
+      },
+      spacing: {
+        72: "18rem",
+      },
+    },
   },
   variants: {
     backgroundColor: ["responsive", "hover", "focus", "active"],
