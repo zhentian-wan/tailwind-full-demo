@@ -1,3 +1,43 @@
+### Install
+
+```bash
+npm install tailwaindcss postcss-cli autoperfixer
+```
+
+### Config a empty tailwind config file
+
+```bash
+npx tailwind init
+```
+
+### Conig postcss
+
+```js
+module.exports = {
+  plugins: [require("tailwindcss"), require("autoprefixer")],
+};
+```
+
+### Add tailwind.css
+
+```css
+// css/tailwind.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Add scripts
+
+```json
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
+  },
+```
+
+Once you run `npm run build`, it will generate css file for you.
+
 ### generate a full tailwind config file
 
 `npx tailwind init tailwind-full.config.js --full`
