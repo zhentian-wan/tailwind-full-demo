@@ -27,23 +27,47 @@
         </button>
       </div>
     </div>
-    <div :class="isOpen ? 'block' : 'hidden'" class="px-2 pt-2 pb-4 sm:flex">
-      <a
-        href="#"
-        class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
-        >List your property</a
-      >
-      <a
-        href="#"
-        class="block mt-1 sm:mt-0 sm:ml-2 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
-        >Trips</a
-      >
-      <a
-        href="#"
-        class="block mt-1 sm:mt-0 sm:ml-2 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
-        >Messages</a
-      >
-      <AccountDropdown class="ml-6"></AccountDropdown>
+    <div :class="isOpen ? 'block' : 'hidden'" class="sm:block">
+      <div class="px-2 pt-2 pb-4 sm:flex">
+        <a
+          href="#"
+          class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
+          >List your property</a
+        >
+        <a
+          href="#"
+          class="block mt-1 sm:mt-0 sm:ml-2 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
+          >Trips</a
+        >
+        <a
+          href="#"
+          class="block mt-1 sm:mt-0 sm:ml-2 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
+          >Messages</a
+        >
+        <AccountDropdown class="sm:ml-6 hidden sm:block"></AccountDropdown>
+      </div>
+
+      <div class="relative px-4 py-5 border-t border-gray-800 sm:hidden">
+        <div class="flex">
+          <img
+            class="h-8 w-8 rounded-full overflow-hidden object-cover"
+            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80"
+            alt="Your avatar"
+          />
+          <span class="text-white font-semibold ml-3">Jane Doe</span>
+        </div>
+        <div class="mt-4">
+          <a href="#" class="block text-gray-400 hover:text-white"
+            >Account settings</a
+          >
+          <a href="#" class="block mt-2 text-gray-400 hover:text-white"
+            >Support</a
+          >
+          <a href="#" class="block mt-2 text-gray-400 hover:text-white"
+            >Sign out</a
+          >
+        </div>
+      </div>
     </div>
   </header>
 </template>
